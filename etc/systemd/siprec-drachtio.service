@@ -1,0 +1,15 @@
+[Unit]
+Description="SIPREC drachtio app"
+
+[Service]
+ExecStart=/usr/bin/node app.js
+WorkingDirectory=/home/support/siprec/drachtio-siprec-recording-server
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=SIPRECdrachtio
+Environment=NODE_ENV=production PORT=8080
+
+[Install]
+WantedBy=multi-user.target
