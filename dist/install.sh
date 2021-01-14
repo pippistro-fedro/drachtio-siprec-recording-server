@@ -17,6 +17,9 @@ npm install
 
 echo restarting services
 sudo systemctl restart rsyslog
+sudo systemctl enable siprec-rtpengine.service
+sudo systemctl restart siprec-rtpengine.service
 sudo systemctl enable siprec-drachtio.service
 sudo systemctl restart siprec-drachtio.service
+
 echo done.

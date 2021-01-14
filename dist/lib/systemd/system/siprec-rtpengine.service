@@ -1,0 +1,18 @@
+[Unit]
+Description=NGCP siprec drachtio RTP/media Proxy Daemon
+After=network-online.target
+After=remote-fs.target
+Requires=network-online.target
+
+[Service]
+Type=notify
+EnvironmentFile=/etc/default/ngcp-rtpengine-daemon
+PIDFile=/var/run/siprec-rtpengine-daemon.pid
+ExecStartPre=/usr/sbin/ngcp-rtpengine-iptables-setup start
+ExecStart=/usr/sbin/rtpengine -f --pidfile /var/run/siprec-rtpengine.pid --config-file /etc/rtpengine/siprec-rtpengine.conf 
+ExecStopPost=/usr/sbin/ngcp-rtpengine-iptables-setup stop
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
