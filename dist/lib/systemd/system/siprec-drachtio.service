@@ -2,7 +2,7 @@
 Description="SIPREC drachtio app"
 
 [Service]
-ExecStart=/usr/bin/node app.js
+ExecStart=/usr/bin/node app.js siprec-drachtio
 WorkingDirectory=__HOMEPATH__
 Restart=always
 RestartSec=10
