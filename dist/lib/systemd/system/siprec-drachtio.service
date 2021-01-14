@@ -3,7 +3,7 @@ Description="SIPREC drachtio app"
 
 [Service]
 ExecStart=/usr/bin/node app.js
-WorkingDirectory=/home/support/siprec/drachtio-siprec-recording-server
+WorkingDirectory=__HOMEPATH__
 Restart=always
 RestartSec=10
 StandardOutput=syslog
