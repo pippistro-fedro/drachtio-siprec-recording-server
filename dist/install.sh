@@ -22,4 +22,7 @@ sudo systemctl restart siprec-rtpengine.service
 sudo systemctl enable siprec-drachtio.service
 sudo systemctl restart siprec-drachtio.service
 
+sudo mkdir -p /var/spool/rtpengine
+sudo chmod +rx  /var/spool/rtpengine
+
 echo done.
