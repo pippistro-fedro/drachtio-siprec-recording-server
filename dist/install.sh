@@ -4,7 +4,7 @@ DIR="$(echo $(cd ../ && pwd))"
 
 echo creating config file
 cp -f ../config/default.json.example-rtpengine ../config/local.json
-sed -i "#35\.195\.201\.218s#127\.0\.0\.1#g" ../config/local.json
+sed -i "s#35\.195\.201\.218#127\.0\.0\.1#g" ../config/local.json
 
 echo copying system file
 sudo cp -f -r etc/* /etc
